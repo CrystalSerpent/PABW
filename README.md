@@ -1,1 +1,15 @@
-# PABW
+## Pertemuan 3 — Halaman profil saya
+
+Topik halaman saya: Pengalaman Membuat Hayashi Rice.
+
+- Judul halaman: Pengalaman Saya Membuat Hayashi Rice
+- Deskripsi: Halaman ini menceritakan pengalaman saya dalam membuat Hayashi Rice dengan bahan homemade.
+- Tautan navigasi: Proses Memasak, Catatan Masakan, Tentang Saya
+- Dua bagian utama: Proses Memasak, Catatan Masakan
+- Kolom tabel: tahap, kegiatan, durasi
+- Kolom form: nama tahap, durasi, catatan
+- Gambar: hayashi-rice.webp
+
+## Catatan penggunaan AI
+
+Dibantu AI dalam menentukan struktur dan rencana isi halaman. Isi dan topik halaman ditentukan sendiri.
