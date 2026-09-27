@@ -1,0 +1,32 @@
+.galeri-masakan {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.galeri-masakan article {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.galeri-masakan figure {
+  margin: 0;
+}
+
+.galeri-masakan img {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+@media (max-width: 36rem) {
+  .galeri-masakan {
+    flex-wrap: wrap;
+  }
+
+  .galeri-masakan article {
+    flex-basis: 100%;
+  }
+}

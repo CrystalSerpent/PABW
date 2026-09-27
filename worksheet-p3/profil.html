@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Galeri beberapa masakan yang pernah saya buat di rumah.">
+    <title>Masakan yang Saya Buat</title>
+    <link rel="stylesheet" href="profil.css">
+  </head>
+  <body>
+    <header>
+      <h1>Masakan yang Saya Buat</h1>
+      <p>
+        Halaman ini menampilkan beberapa masakan yang pernah saya buat di rumah.
+      </p>
+
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#daftar-masakan">Daftar Masakan</a></li>
+          <li><a href="#tambah-masakan">Tambahkan Masakan</a></li>
+          <li><a href="#tentang-saya">Tentang Saya</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="daftar-masakan">
+        <h2>Daftar Masakan yang Pernah Saya Buat</h2>
+        <p>
+          Berikut beberapa masakan yang pernah saya dokumentasikan saat dibuat.
+        </p>
+
+        <div class="galeri-masakan">
+          <article>
+            <h3>Chicken Katsu Curry</h3>
+            <figure>
+              <img
+                src="Asset/Katsu-Curry.jpg"
+                alt="Sepiring chicken katsu curry dengan potongan ayam berlapis tepung, nasi putih, kentang, dan wortel di atas meja kayu."
+                width="2160"
+                height="2160"
+                loading="lazy"
+              >
+              <figcaption>Chicken katsu curry dengan nasi dan saus curry.</figcaption>
+            </figure>
+          </article>
+
+          <article>
+            <h3>Masakan Berkuah</h3>
+            <figure>
+              <img
+                src="Asset/Semur-daging.png"
+                alt="Masakan berkuah berwarna cokelat dengan potongan bahan di dalam panci."
+                width="494"
+                height="629"
+                loading="lazy"
+              >
+              <figcaption>Masakan berkuah yang sedang dimasak dalam panci.</figcaption>
+            </figure>
+          </article>
+
+          <article>
+            <h3>Ayam Goreng dengan Telur</h3>
+            <figure>
+              <img
+                src="Asset/ayam-dengan-telur.png"
+                alt="Potongan ayam berlapis tepung sedang dimasak bersama telur di dalam wajan."
+                width="498"
+                height="445"
+                loading="lazy"
+              >
+              <figcaption>Ayam goreng yang dimasak bersama telur di wajan.</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <table>
+          <caption>
+            Ringkasan masakan yang ditampilkan
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Masakan</th>
+              <th scope="col">Keterangan</th>
+              <th scope="col">Dokumentasi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Chicken katsu curry</th>
+              <td>Ayam katsu disajikan dengan nasi dan saus curry.</td>
+              <td>Tersedia</td>
+            </tr>
+            <tr>
+              <th scope="row">Masakan berkuah</th>
+              <td>Masakan berkuah yang dimasak dalam panci.</td>
+              <td>Tersedia</td>
+            </tr>
+            <tr>
+              <th scope="row">Ayam goreng dengan telur</th>
+              <td>Ayam goreng yang dimasak bersama telur di wajan.</td>
+              <td>Tersedia</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="tambah-masakan">
+        <h2>Tambahkan Masakan</h2>
+        <p>
+          Formulir ini tersedia untuk menambahkan masakan lain ke daftar.
+        </p>
+
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Data masakan</legend>
+
+            <p>
+              <label for="nama-tahap">Nama masakan</label><br>
+              <input
+                type="text"
+                id="nama-tahap"
+                name="nama-tahap"
+                minlength="3"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="durasi">Lama memasak (menit)</label><br>
+              <input
+                type="number"
+                id="durasi"
+                name="durasi"
+                min="1"
+                max="180"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="tanggal-memasak">Tanggal dibuat</label><br>
+              <input
+                type="date"
+                id="tanggal-memasak"
+                name="tanggal-memasak"
+                required
+              >
+            </p>
+
+            <p>
+              <label for="catatan">Cerita singkat</label><br>
+              <textarea
+                id="catatan"
+                name="catatan"
+                rows="4"
+                required
+              ></textarea>
+            </p>
+
+            <button type="submit">Tambahkan Masakan</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer id="tentang-saya">
+      <h2>Tentang Saya</h2>
+      <p>
+        Halaman ini dibuat oleh Muchamad Aril Kurniawan untuk tugas Pengembangan
+        Aplikasi Berbasis Web.
+      </p>
+    </footer>
+  </body>
+</html>
