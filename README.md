@@ -5,15 +5,15 @@ Berbasis Web, satu folder untuk setiap pertemuan.
 
 ## Pertemuan 3 — Halaman profil saya
 
-Topik halaman saya: Pengalaman Membuat Hayashi Rice.
+Topik halaman saya: Masakan Yang Saya Buat.
 
-- Judul halaman: Pengalaman Saya Membuat Hayashi Rice
-- Deskripsi: Halaman ini menceritakan pengalaman saya dalam membuat Hayashi Rice dengan bahan homemade.
+- Judul halaman: Masakan Yang Saya Buat
+- Deskripsi: Halaman ini menceritakan pengalaman Memasak Saya.
 - Tautan navigasi: Proses Memasak, Catatan Masakan, Tentang Saya
 - Dua bagian utama: Proses Memasak, Catatan Masakan
 - Kolom tabel: tahap, kegiatan, durasi
 - Kolom form: nama tahap, durasi, catatan
-- Gambar: hayashi-rice.webp
+- Gambar: Katsu-Curry.jpg
 
 ## Catatan penggunaan AI
 
