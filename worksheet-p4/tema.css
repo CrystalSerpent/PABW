@@ -1,0 +1,51 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-bg: var(--brown-950);
+    --color-fg: var(--cream-50);
+    --color-muted: var(--cream-200);
+    --color-surface: var(--brown-900);
+    --color-border: var(--border-dark);
+    --color-primary: color-mix(in srgb, var(--terra-700), var(--white) 45%);
+    --color-primary-hover: color-mix(in srgb, var(--terra-700), var(--white) 65%);
+    --color-on-primary: var(--brown-800);
+    --color-danger: var(--danger-dark);
+    --color-danger-surface: var(--brown-800);
+    --color-focus: var(--color-primary);
+    --shadow-1: var(--shadow-dark);
+  }
+
+  :root:has(#tema:checked) {
+    color-scheme: light;
+    --color-bg: var(--cream-50);
+    --color-fg: var(--ink-950);
+    --color-muted: var(--ink-700);
+    --color-surface: var(--white);
+    --color-border: var(--border-light);
+    --color-primary: var(--terra-700);
+    --color-primary-hover: var(--terra-800);
+    --color-on-primary: var(--white);
+    --color-danger: var(--danger-700);
+    --color-danger-surface: var(--danger-100);
+    --color-focus: var(--color-primary);
+    --shadow-1: var(--shadow-light);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:has(#tema:checked) {
+    color-scheme: dark;
+    --color-bg: var(--brown-950);
+    --color-fg: var(--cream-50);
+    --color-muted: var(--cream-200);
+    --color-surface: var(--brown-900);
+    --color-border: var(--border-dark);
+    --color-primary: color-mix(in srgb, var(--terra-700), var(--white) 45%);
+    --color-primary-hover: color-mix(in srgb, var(--terra-700), var(--white) 65%);
+    --color-on-primary: var(--brown-800);
+    --color-danger: var(--danger-dark);
+    --color-danger-surface: var(--brown-800);
+    --color-focus: var(--color-primary);
+    --shadow-1: var(--shadow-dark);
+  }
+}
