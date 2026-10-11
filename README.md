@@ -36,3 +36,14 @@ Dibantu AI dalam menentukan struktur dan rencana isi halaman, design token, sert
 | `--space-4` | `1rem` | jarak standar antar elemen |
 
 Kriteria selesai saya: mengubah satu token warna utama di `tokens.css` harus mengubah tombol, tautan, dan garis fokus tanpa menyunting berkas komponen.
+
+## Pertemuan 8 — JavaScript Modern dan Struktur Data
+
+- Folder pekerjaan: `worksheet-p8/`.
+- Data halaman masakan disimpan di `worksheet-p8/js/app.js` sebagai objek `profil` dan array of object `daftarProyek`.
+- Halaman menggunakan `map`, `filter`, dan `find`; dua fungsi murni yang digunakan adalah `buatPerkenalan` dan `formatKeahlian`.
+- Halaman dibuka melalui server lokal agar skrip modul dapat berjalan.
+
+## Catatan penggunaan AI Pertemuan 8
+
+AI membantu menyiapkan struktur awal JavaScript, menjelaskan fungsi dan array methods, serta mengecek konsistensi HTML/CSS. Isi topik, data masakan, dokumentasi, dan penyesuaian akhir halaman ditentukan serta diperiksa sendiri.
