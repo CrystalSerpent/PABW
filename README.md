@@ -47,3 +47,16 @@ Kriteria selesai saya: mengubah satu token warna utama di `tokens.css` harus men
 ## Catatan penggunaan AI Worksheet 8
 
 AI membantu menyiapkan struktur awal JavaScript, menjelaskan fungsi dan array methods, serta mengecek konsistensi HTML/CSS. Isi topik, data masakan, dokumentasi, dan penyesuaian akhir halaman ditentukan serta diperiksa sendiri.
+
+## Worksheet 9 — DOM, Events, dan Interaktivitas
+
+- Folder pekerjaan: `worksheet-p9/`.
+- `js/app.js` menyimpan data dan fungsi murni (diekspor), `js/dom.js` mengisi halaman dan menangani event.
+- Daftar masakan dan tabel ringkasan dibuat dari array dengan `createElement` dan `textContent`, tidak ditulis manual di HTML.
+- Fungsi `render(daftar)` selalu mengosongkan container lebih dulu dan menampilkan pesan saat kategori kosong.
+- Tombol filter (Semua, Gorengan, Berkuah, Kue) dilayani satu listener di parent `#filter` dengan `event.target.closest("button")`.
+- Form memakai `preventDefault`, validasi per field dengan `trim()`, pesan galat per field, dan tombol kirim ditahan sampai semua isian valid.
+
+## Catatan penggunaan AI Worksheet 9
+
+AI dipakai sebagai pendamping belajar: membantu memahami instruksi worksheet, memberi contoh pola render dan event delegation, serta membantu mengecek kode. Topik, data masakan, dan pemeriksaan akhir halaman tetap saya lakukan sendiri.
