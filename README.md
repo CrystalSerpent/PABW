@@ -60,3 +60,17 @@ AI membantu menyiapkan struktur awal JavaScript, menjelaskan fungsi dan array me
 ## Catatan penggunaan AI Worksheet 9
 
 AI dipakai sebagai pendamping belajar: membantu memahami instruksi worksheet, memberi contoh pola render dan event delegation, serta membantu mengecek kode. Topik, data masakan, dan pemeriksaan akhir halaman tetap saya lakukan sendiri.
+
+## Worksheet 10 — Asynchronous JavaScript: fetch, Promise, dan JSON
+
+- Folder pekerjaan: `worksheet-p10/`.
+- API: DummyJSON Recipes (`https://dummyjson.com/recipes`), publik, https, tanpa API key. Alamatnya ditulis sekali di baris atas `js/api.js` (`URL_API`).
+- `js/api.js` adalah lapisan data dan satu-satunya file yang memanggil `fetch`. Fungsi yang diekspor: `ambilResep()` (GET resep ayam lewat `/search?q=chicken`) dan `kirimMasakan(masakan)` (POST ke `/add` dengan `JSON.stringify`; DummyJSON hanya menyimulasikan penyimpanan).
+- `response.ok` dicek sebelum `response.json()` dibaca; status di luar 2xx dilempar sebagai `Error`.
+- Di `js/app.js` saya menyimpan data dan fungsi murni, sedangkan `js/dom.js` mengurus halaman. Karena itu pemanggil `api.js` adalah `dom.js`, dan `try/catch` kedua juga ada di sana. `app.js` tidak diubah.
+- Empat state di bagian "Inspirasi Resep Ayam": loading ("Memuat resep dari internet…"), success (kartu resep), failure (pesan galat + tombol "Coba lagi"), empty ("Belum ada resep dari server saat ini."). State kosong bisa diuji dari Console dengan `renderResep([])`.
+- Halaman dibuka lewat server lokal (Live Server atau `python -m http.server 8000`), bukan dengan klik dua kali.
+
+## Catatan penggunaan AI Worksheet 10
+
+AI (Claude) membantu menulis kerangka `js/api.js`, fungsi render resep dan keempat state di `dom.js`, serta menguji state sukses/gagal/kosong. Pemilihan API yang sesuai topik masakan, pengisian worksheet, pengujian di browser saya sendiri, dan screenshot bukti dilakukan sendiri. Saya sudah membaca dan bisa menjelaskan setiap baris kodenya.

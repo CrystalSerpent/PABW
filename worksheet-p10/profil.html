@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Halaman profil mahasiswa.">
+    <title>Halaman Profil</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-baris">
+          <div class="header-judul">
+            <p class="eyebrow" id="eyebrow-header"></p>
+            <h1 id="judul-halaman"></h1>
+          </div>
+
+          <div class="header-aksi">
+            <input type="checkbox" id="tema" class="pengalih-tema">
+            <label for="tema" class="tombol-tema">Ganti tema</label>
+
+            <nav class="site-nav" aria-label="Navigasi utama">
+              <ul>
+                <li><a href="#daftar-masakan">Daftar Masakan</a></li>
+                <li><a href="#resep-internet">Inspirasi Resep</a></li>
+                <li><a href="#tambah-masakan">Tambahkan Masakan</a></li>
+                <li><a href="#tentang-saya">Tentang Saya</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <p class="deskripsi-header" id="deskripsi-header"></p>
+      </div>
+    </header>
+
+    <main class="site-main container">
+      <section id="daftar-masakan" class="section">
+        <div class="section-heading">
+          <p class="eyebrow" id="eyebrow-daftar"></p>
+          <h2 id="judul-daftar"></h2>
+          <p id="deskripsi-daftar"></p>
+        </div>
+
+        <div class="filter-baris" id="filter" role="group" aria-label="Saring berdasarkan kategori">
+          <button type="button" data-category="semua">Semua</button>
+          <button type="button" data-category="goreng">Gorengan</button>
+          <button type="button" data-category="berkuah">Berkuah</button>
+          <button type="button" data-category="kue">Kue</button>
+        </div>
+
+        <div class="katalog" id="katalog-masakan"></div>
+        <p class="pesan-kosong" id="pesan-kosong" hidden>
+          Belum ada masakan di kategori ini. Coba pilih kategori lain.
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <caption id="caption-ringkasan"></caption>
+            <thead>
+              <tr>
+                <th scope="col">Masakan</th>
+                <th scope="col">Keterangan</th>
+                <th scope="col">Dokumentasi</th>
+              </tr>
+            </thead>
+            <tbody id="ringkasan-masakan"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="resep-internet" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Dari internet</p>
+          <h2>Inspirasi Resep Ayam</h2>
+          <p>Resep berikut diambil langsung dari API publik DummyJSON setiap halaman dibuka.</p>
+        </div>
+
+        <p class="status-resep" id="status-resep" role="status" aria-live="polite"></p>
+        <button type="button" id="coba-lagi" hidden>Coba lagi</button>
+        <div class="katalog" id="daftar-resep"></div>
+      </section>
+
+      <section id="tambah-masakan" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Catatan berikutnya</p>
+          <h2>Tambahkan Masakan</h2>
+          <p>Formulir ini tersedia untuk menambahkan masakan lain ke daftar.</p>
+        </div>
+
+        <form class="form-masakan" id="form-masakan" action="#" method="post" novalidate>
+          <fieldset>
+            <legend>Data masakan</legend>
+
+            <div class="form-kolom">
+              <label for="nama-masakan">Nama masakan</label>
+              <input
+                class="form-control"
+                type="text"
+                id="nama-masakan"
+                name="nama-masakan"
+                minlength="3"
+                aria-describedby="nama-masakan-error"
+                required
+              >
+              <span id="nama-masakan-error" class="pesan-galat" aria-live="polite">
+                Masukkan nama masakan setidaknya tiga karakter.
+              </span>
+            </div>
+
+            <div class="form-kolom">
+              <label for="durasi">Lama memasak (menit)</label>
+              <input
+                class="form-control"
+                type="number"
+                id="durasi"
+                name="durasi"
+                min="1"
+                max="180"
+                aria-describedby="durasi-error"
+                required
+              >
+              <span id="durasi-error" class="pesan-galat" aria-live="polite">
+                Masukkan durasi antara 1 sampai 180 menit.
+              </span>
+            </div>
+
+            <div class="form-kolom">
+              <label for="tanggal-memasak">Tanggal dibuat</label>
+              <input
+                class="form-control"
+                type="date"
+                id="tanggal-memasak"
+                name="tanggal-memasak"
+                aria-describedby="tanggal-memasak-error"
+                required
+              >
+              <span id="tanggal-memasak-error" class="pesan-galat" aria-live="polite">
+                Pilih tanggal saat masakan dibuat.
+              </span>
+            </div>
+
+            <div class="form-kolom">
+              <label for="catatan">Cerita singkat</label>
+              <textarea
+                class="form-control"
+                id="catatan"
+                name="catatan"
+                rows="4"
+                aria-describedby="catatan-error"
+                required
+              ></textarea>
+              <span id="catatan-error" class="pesan-galat" aria-live="polite">
+                Tambahkan cerita singkat tentang masakan ini.
+              </span>
+            </div>
+
+            <button type="submit">Tambahkan Masakan</button>
+            <p class="status-form" id="status-form" role="status"></p>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer id="tentang-saya" class="site-footer">
+      <div class="container">
+        <p class="eyebrow">Tentang halaman</p>
+        <h2>Tentang Saya</h2>
+        <p id="tentang-saya-teks"></p>
+        <p id="keahlian-saya"></p>
+      </div>
+    </footer>
+    <script type="module" src="js/dom.js"></script>
+  </body>
+</html>
